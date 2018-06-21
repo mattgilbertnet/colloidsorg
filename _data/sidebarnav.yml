@@ -1,0 +1,20 @@
+# Menu navigation links
+links:
+
+- name: research
+  url: http://www.peterlu.org/research/
+
+- name: publications
+  url: http://www.peterlu.org/publications/
+  
+- name: press
+  url: http://www.peterlu.org/press/
+  
+- name: photo
+  url: http://www.peterlu.org/photo/
+  
+- name: video
+  url: http://www.peterlu.org/video/
+  
+- name: about
+  url: http://www.peterlu.org/about.html

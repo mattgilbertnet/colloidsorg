@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   12px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$text-color:       #000;
+$spacing-unit:     30px !default;
+$background-color: #fff !default;
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$em-color:				 #009BC5;
+$h-color:				   $em-color;
+$link-color:			 $em-color;
+
+// Width of the content area
+$content-width:    925px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        925px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@import
+  "skeleton/normalize",
+  "skeleton/skeleton",
+  "skeleton/syntax",
+  "slick/slick",
+  "slick/slick-theme"
+;

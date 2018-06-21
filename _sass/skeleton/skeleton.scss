@@ -1,0 +1,873 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 925px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.site-nav-container,
+.site-nav{
+  z-index:2;
+}
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container{
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 700px) {
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+.researchtopic-content{
+  margin-left: 0;
+}
+.researchtopic-publications,
+.researchtopic-press{
+  width: 100%;
+  clear:both;
+}
+.researcharea-topic{
+  padding-bottom: 2rem;
+}
+.researchtopic-thumbnail img,
+.carousel-thumbnail img{
+  width:100%;
+  max-width:300px;
+}
+.page-header{
+  height: 125px;
+  background-image: url("/assets/images/header_bg.png");
+  background-repeat: no-repeat;
+  background-size: 925px 126px;
+}
+#logo_header{
+  max-height:126px;
+}
+
+@media (max-width: 700px) {
+.page-header{
+  height: 82px;
+  background-image: url("/assets/images/header_bg.png");
+  background-repeat: no-repeat;
+  background-size: 602px 82px;
+}
+#logo_header{
+  max-height:82px;
+}
+}
+
+.site-nav label{
+margin: 0;
+}
+@media (max-width: 700px) {
+main{
+  padding-left: 0;
+}
+.site-nav-container{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+main.page-content{
+  padding-left: 0;
+}
+}
+
+.site-nav {
+  float:right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-top: 0em;
+  width: 100%;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query(700px) {
+    position: absolute;
+    top: 9px;
+    right: 10%;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 0;
+    
+    width: auto;
+    padding: .4rem .2rem 0;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $grey-color-dark;
+      }
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+
+
+.carousel-wrapper{
+  margin:0 3rem;
+}
+.carousel-wrapper .carousel-thumbnail,
+.carousel-wrapper .carousel-label{
+padding: 0 1rem 1rem 1rem;
+}
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: $h-color;
+  margin:0;}
+h1{
+  font-size: 2.5rem;
+  padding: .25em 0 1em 0;
+  line-height: 1.25em;
+}
+h2{
+  font-size: 1.75rem;
+  padding: .25em 0 .4em 0;
+  line-height: 1.25em;
+}
+h3{
+	font-size: 1.75rem;
+  line-height: 1.5em;
+}
+h4 { font-size: 1.5rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.5rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+footer.container{ text-align:center; margin-top:1rem;}
+
+select#lang_select{
+	font-size: 1rem;
+	font-weight: normal;
+	margin:0;
+}
+
+
+/* Larger than phablet */
+
+p {
+  margin-top: 0; }
+  
+.breadcrumb{
+  padding-bottom: 8px;
+  font-weight: bold;
+  color: #009BC5;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $link-color; 
+  text-decoration: none;
+  font-weight: bold;}
+a:visited {
+    color: darken($link-color, 15%);}
+.site-nav a:visited {
+    color: $link-color;}
+a:hover {
+  color: $link-color;
+  text-decoration: underline; }
+.social-media-list a:hover {
+  text-decoration: none;
+  .username {
+    text-decoration: underline;
+  }
+}
+a.readmore{
+  font-weight: bold;
+}
+.morelink{
+  text-align: right;
+}
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+  
+/**
+ * Lists (Publications, Press, etc.)
+ */
+.publications ol, .press ol, .links ol{
+  list-style:none;
+  margin-left: 1em;    
+  margin-bottom: 0;
+}
+.publications li, .press li, .links li{
+  margin: 0 0 1em 0;
+}
+.site-nav ul{
+  display:flex;
+  justify-content: flex-end;
+  list-style: none;
+	margin: .5rem 0rem 1rem .5rem;
+}
+#navheader.fixed .site-nav ul{
+	margin: 0rem 0rem 0rem .5rem;
+}
+#navheader.fixed .site-nav li{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.site-nav li{
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  font-weight: bold;
+  margin: 0 1em;
+  display:block;
+  float:left;
+}
+
+@media (max-width: 700px) {
+.site-nav ul{
+  display: block;
+}
+.site-nav li {
+    display: list-item;
+    float:none;
+    font-size: 1.75rem;
+    line-height: 1.5em;
+    font-weight: bold;
+    margin: 8px 0 3px 0;
+}
+}
+
+.site-nav-row{
+	width: 85%;
+	margin: 0 auto;
+	max-width: 925px;
+}
+
+.nav-home{
+position:absolute;
+
+}
+#nav_home_logo{
+display:none;
+}
+#navheader.fixed #nav_home_logo{
+  display: block !important;
+  max-height: 2.75em;
+  @include media-query(700px) {
+    display:none !important;
+  }
+}
+#nav-home-slick{
+  display:none;
+  @include media-query(700px) {
+    display:list-item;
+  }
+}
+
+#navheader{
+  z-index: 1;
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+#navheader{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+@media (min-width: 701px) {
+.fixed .site-nav-row{
+  border-bottom: solid thin #ddd;
+}
+}
+#front-about-ul li{
+  height: 43px;
+}
+#front-about-ul li:last-child{
+  border-bottom: #eee 2px solid;
+}
+.research-content ul{
+  list-style:none;
+}
+ul.research-researchtopics{
+  margin-top:.5em;
+  margin-left: 6em;
+}
+ul.research-researchtopics li{
+  font-size: 1.75em;
+  color: $em-color;
+  margin:0;
+  border:none;
+  padding-bottom: 1rem;
+  line-height: 1.25em;
+}
+.research-researchtopics li a{
+  font-weight: normal;
+}
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+figure{
+ margin:0;
+}
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+  
+
+/* Image Gallery
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul.images-container,
+ul.videos-container{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+a.gallery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  min-width:90px;
+  border: thin #CCC solid;
+  border-radius: 7px;
+  background: #fff;
+  margin: 10px 10px 0 0;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; -webkit-transform: translate3d(0,0,0);}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(images/overlay.png) repeat 0 0; opacity: 0.9; filter: alpha(opacity = 90);}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url(/assets/images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(/assets/images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(/assets/images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(/assets/images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(/assets/images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(/assets/images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(/assets/images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(/assets/images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url(/assets/images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(/assets/images/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(/assets/images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(/assets/images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(/assets/images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/* Video
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.videowrapper, 
+.videowrapper-9-16,
+.videowrapper-4-3 {
+	position: relative;
+	padding-top: 25px;
+	height: 0;
+}
+.videowrapper{
+	padding-bottom: 56.25%; /* 16:9 */
+}
+.videowrapper-9-16{
+	padding-bottom: 177.78%; /* 9:16 */
+}
+.videowrapper-4-3{
+	padding-bottom: 75%; /* 4:3 */
+}
+.videowrapper iframe, 
+.videowrapper-4-3 iframe,
+.videowrapper-9-16 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-custom a {
+    background-size: 100%;
+    box-shadow: inset rgba(0,0,0,.25) 0 0 10px;
+    display: block;
+    height: 125px;
+    margin: 1em 0 1em 1em;
+    position: relative;
+    width: 222px;
+}
+.video-custom svg {
+    fill: #e14c41;
+    height: 64px;
+    left: 50%;
+    margin: -32px 0 0 -32px;
+    opacity: .7;
+    position: absolute;
+    top: 50%;
+    transform: scale(.95,.82);
+    transition: opacity 400ms;
+    width: 64px;
+    z-index: 1;
+}
+.video-custom a:hover svg{opacity:.9}
+.video-custom .title {
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.55);
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
