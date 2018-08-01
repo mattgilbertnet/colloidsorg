@@ -117,7 +117,7 @@
   margin-left: 0;
 }
 .researchtopic-publications,
-.researchtopic-press{
+.researchtopic-mediacoverage{
   width: 100%;
   clear:both;
 }
@@ -478,14 +478,14 @@ li {
   margin-bottom: 1rem; }
   
 /**
- * Lists (Publications, Press, etc.)
+ * Lists (Publications, Media Coverage, etc.)
  */
-.publications ol, .press ol, .links ol{
+.publications ol, .mediacoverage ol, .links ol{
   list-style:none;
   margin-left: 1em;    
   margin-bottom: 0;
 }
-.publications li, .press li, .links li{
+.publications li, .mediacoverage li, .links li{
   margin: 0 0 1em 0;
 }
 .site-nav ul{
