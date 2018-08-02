@@ -14,11 +14,30 @@
   
 <article>
   <h1>BCAT and ACE: Colloid Physics in Space</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span>: <a href="{{ site.url }}/colloidsorg{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+      <div class="row sort">
+      <p>Sort by:&nbsp;
+        <a href="#" data-filter="*" class="current">All</a>
+      {% for category in site.categories %}
+        &nbsp;&nbsp;/&nbsp;&nbsp;<a href="#" data-filter=".{{ category | first }}">{{ category | first | capitalize }}</a>
+      {% endfor %}
+      </p>
+    </div>
+    <div class="row portfolioContainer">
+
+  		{% for post in site.posts %}
+
+	  	<div class="col-sm-3 {{ post.categories | join: ' ' }}">
+        <a href="{{ post.url }}">
+  	  		<div class="circle" style="background-image:url('{{ post.image }}');">
+            <p><span class="date">{{ post.date | date_to_string }}</span>{{ post.title }}</p>
+          </div>
+        </a>
+	  	</div>
+	  	
+	  	{% endfor %}
+
+    </div> <!-- /.row -->
+
 </article> 
 
 </div>

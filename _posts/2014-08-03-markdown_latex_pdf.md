@@ -2,6 +2,8 @@
 layout: post
 date: 2014-08-03 0:00:00 UTC
 title: Converting the website to documents
+category: informatics
+image: images/homepage/square186.png
 ---
 
 # Generating publication-quality documents from the same website source

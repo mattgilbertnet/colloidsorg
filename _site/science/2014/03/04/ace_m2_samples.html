@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Samples for the second ACE experiment, ACE-M2</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="why-ace-m2">Why ACE-M2?</h1>
+
+<p>We learned a tremendous amount from the series of BCAT experiments conducted aboard the ISS over the past decade. One of the challenges of macroscopic photography, however, is the limited ability to see small features. Observable structures have to be at least a few pixels wide, which means we can image features that have to be tens of microns across, or larger. The particles are a half-micron in diameter, which means that the early stages of phase-separation, or indeed any other process we wish to observe with colloids, are not visible with traditional photography. We see this in our data; we don’t see much happening within the first (sometimes many) hours after sample mixing.</p>
+
+<p>ACE allows us to put these same samples under the microscope, where we can comfortably get micron-level resolution, and if everything works out, significantly better. Scientifically, we are able to then watch the structures forming from a much earlier time, when they are smaller, which gives insight into the fundamental mechanisms driving these processes.</p>
+
+<p>The microscope, however, is a new (to us, at least) facility, and its capabilities on orbit are not well-characterized for our purposes: can we get enough light to the sample to see the particles? What is the range of intensities that we can detect at the camera, with the various filters and dichroics in the system? Will the particles be visible? What is the image quality using different microscope objectives? These parameters all depend on our choice of sample, as well as the hardware on orbit, and the on-paper specifications from the manufacturers are often rather poor guides, as they apply primarily to pristine instruments in a clean, ground-based, stable environment—not reflecting the real-world challenges of flying a vehicle in low-earth orbit.</p>
+
+<p>Therefore, we are launching three categories of samples:</p>
+
+<ol>
+  <li>
+    <p><strong>Fluorescent dyes in solvent:</strong> these samples establish that we are able to observe fluorescence, using the same fluorophores as are in the colloidal particles, but without any particles. This frees us from having to worry about, for instance, whether the particles are stable, or sediment out, or can be mixed.</p>
+  </li>
+  <li>
+    <p><strong>Suspensions of fluorescent colloidal particles in solvent:</strong> these samples allow us to measure intensities of different particle concentrations, with the end-goal of being able to take a sample and identify its density (volume fraction) based on fluorecence intensity, a quantitative use of the microscope. They are also a test of whether the particles survive the launch and can be mixed, and are stable and bright.</p>
+  </li>
+  <li>
+    <p><strong>Mixtures of colloidal particles and polymers in solvent:</strong> these samples should exhibit dynamic changes, undergoing the process of phase separation. We should see the formation of structures much as we saw in BCAT, but on a smaller length scale and starting much earlier, with higher-magnification microscopy.</p>
+  </li>
+</ol>
+
+<h1 id="sample-composition-charts">Sample composition charts</h1>
+
+<p>Here are the exact samples we delivered to NASA / ZIN, and are launching to the ISS. All of the samples have the same solvent: 18% cis-decalin, 22% tetralin and 60% tetrachloroethylene, where the percentages are based on masses (not volumes). We have two particle sizes—large (880 nm radius) and small (290 nm radius)—and all have the Cy3-MMA fluorescent dye. We use one polymer, a linear polystyrene with a nominal molecular weight of 11.4M; its concentration is expressed in mg of polymer per gram of solvent.</p>
+
+<h2 id="fluorescent-dyes">Fluorescent dyes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Sample number</th>
+      <th style="text-align: center">Sample name</th>
+      <th style="text-align: center">Dye</th>
+      <th style="text-align: center">Free dye concentration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">plu_ACEM2_Cy3M1</td>
+      <td style="text-align: center">Cy3-MMA</td>
+      <td style="text-align: center">0.048%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">plu_ACEM2_Cy3M4</td>
+      <td style="text-align: center">Cy3-MMA</td>
+      <td style="text-align: center">0.012%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">plu_ACEM2_DiI1</td>
+      <td style="text-align: center">DiI</td>
+      <td style="text-align: center">0.062%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">plu_ACEM2_DiI4</td>
+      <td style="text-align: center">DiI</td>
+      <td style="text-align: center">0.016%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">plu_ACEM2_DiO1</td>
+      <td style="text-align: center">DiO</td>
+      <td style="text-align: center">0.041%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">plu_ACEM2_DiO4</td>
+      <td style="text-align: center">DiO</td>
+      <td style="text-align: center">0.010%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td style="text-align: center">plu_ACEM2_solv</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="colloidal-suspensions">Colloidal suspensions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Sample number</th>
+      <th style="text-align: center">Sample name</th>
+      <th style="text-align: center">Colloid size</th>
+      <th style="text-align: center">Colloid volume fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">plu_ACEM2_lg_40p0</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">40.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">plu_ACEM2_lg_30p0</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">30.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">plu_ACEM2_lg_19p9</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">19.9%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">plu_ACEM2_lg_10p7</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">10.7%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center">plu_ACEM2_lg_05p2</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">5.2%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">13</td>
+      <td style="text-align: center">plu_ACEM2_lg_00p4</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">0.4%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">14</td>
+      <td style="text-align: center">plu_ACEM2_sm_45p0</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">45.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">plu_ACEM2_sm_29p9</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">29.9%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">plu_ACEM2_sm_19p8</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">19.8%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center">plu_ACEM2_sm_10p1</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">10.1%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">plu_ACEM2_sm_05p0</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">5.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">19</td>
+      <td style="text-align: center">plu_ACEM2_sm_00p5</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">0.5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="colloid-polymer-mixtures">Colloid-polymer mixtures</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Sample number</th>
+      <th style="text-align: center">Sample name</th>
+      <th style="text-align: center">Colloid size</th>
+      <th style="text-align: center">Colloid volume fraction</th>
+      <th style="text-align: center">Polymer concentration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">plu_ACEM2_sm_ps</td>
+      <td style="text-align: center">small</td>
+      <td style="text-align: center">15.0%</td>
+      <td style="text-align: center">0.529 mg/g</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">21</td>
+      <td style="text-align: center">plu_ACEM2_lg_ps</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">20.5%</td>
+      <td style="text-align: center">0.153 mg/g</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">22</td>
+      <td style="text-align: center">plu_ACEM2_lg_gel</td>
+      <td style="text-align: center">large</td>
+      <td style="text-align: center">22.0%</td>
+      <td style="text-align: center">0.275 mg/g</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

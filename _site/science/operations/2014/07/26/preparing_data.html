@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>First look at some raw data, preliminary stabilization</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="first-time-sequence-data-from-iss">First time sequence data from ISS</h1>
+
+<p>We think that the samples we are looking at in the current run (the fourth) on ISS with ACE-M2 are undergoing phase separation and gelation, based on ground studies and preliminary images from orbit. To understand how these samples evolve over time, we perform nominally the same procedure—collecting images from the same positions, magnifications, depths, at similar settings—each day we run the experiment. In principle, then the images from successive days should have the same (or at least very close) brightness and contrast, and should overlay on top of each other exactly. To see whether this is happening in practice, here is the raw sequence of 10x composite images of sample 22 (platter 2105, strip B618, well 4) taken on days 2, 3, 5, 8, 11 and 15:</p>
+
+<p><img src="/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15_resize.gif" alt="10x composite, raw images" /></p>
+
+<p><img src="/images/ace_m2_sample_tiles/sample22.png" alt="" /></p>
+
+<p>The position shifts slightly, and the brightness changes. Clearly, the images are not exactly aligned, and the motion distracts from being able to watch any evolution in the sample, as well as interfering with any automated analysis.</p>
+
+<h2 id="pre-processing-image-data">Pre-processing image data</h2>
+
+<p>To fix these issues, I will align the images within the time sequence, and match their brightnesses so that the intensity doesn’t change so dramatically.</p>
+
+<h3 id="aligning-the-images">Aligning the images</h3>
+
+<p>The first major task is to align the images from subsequent days of data collection. I first <a href="/operations/science/2014/07/14/whereis_data.html">rename the files</a>, then in Photoshop CS6 import the set of images into separate layers in a composite image, with <code class="highlighter-rouge">File &gt; Scripts &gt; Load Files into Stack...</code>, enabling the option to <code class="highlighter-rouge">Attempt to Automatically Align Source Images</code>. This works pretty well for these images, where the overall shape of the well can guide the alignment algorithm.</p>
+
+<p>This process is not fast, taking several seconds per image, but for just a handful of images, it works well enough. By contrast, for BCAT, where we have hundreds of frames, I create an image sequence movie in Adobe After Effects, and use the tracking features there to far more quickly do the alignment.</p>
+
+<p>I then crop the images so that there are no blank borders, and save the file as a mult-layer <code class="highlighter-rouge">.psd</code> file.</p>
+
+<h3 id="matching-intensities">Matching intensities</h3>
+
+<p>For color images, the Photoshop feature <code class="highlighter-rouge">Match Color...</code> is very good and extremely helpful. In our case, however, grayscale images do not have the same feature, and the option is unavailable. Instead, using a combination of <code class="highlighter-rouge">Levels</code> and ```Curves, I adjust each image to have the same mean (a little over 100 in 8-bit grayscale values) and standard deviation (about 60 8-bit grayscale levels).</p>
+
+<h3 id="building-the-animation">Building the animation</h3>
+
+<p>In the <code class="highlighter-rouge">Timeline</code> palette, I <code class="highlighter-rouge">Create Frame Animation</code>, then in the drop-down menu select <code class="highlighter-rouge">Make Frames from Layers</code>. The great thing about this feature is that it otherwise doesn’t affect anything about the image or its layers. The final step is to export to an animated <code class="highlighter-rouge">.gif</code> file, using the <code class="highlighter-rouge">Save for Web...</code> dialog box. There I reduce to final web resolution, and create the final file:</p>
+
+<p><img src="/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15.gif" alt="10x composite, aligned images" /></p>
+
+<h2 id="higher-magnification">Higher magnification</h2>
+
+<p>I apply the same procedure to the higher-magnification 40x composite. First, the raw data (just resized):</p>
+
+<p><img src="/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15_resize.gif" alt="40x composite, raw images" /></p>
+
+<p>And then the corrected version, where the aligned images have a mean of 128 and standard deviation of 40 8-bit grayscale levels:</p>
+
+<p><img src="/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15.gif" alt="40x composite, aligned images" /></p>
+
+<h2 id="stage-reproducibility-or-drift">Stage reproducibility or drift?</h2>
+
+<p>Several things are apparent from these sequences. First, the stage is not perfectly reproducible from a mechanical standpoint. The composites seem to move around a little bit, likely due to mechanical backlash in the stage. Second, intensities are not constant from day to day.</p>
+
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

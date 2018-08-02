@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>ACE-M2 first-run flight operations</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="science-depends-on-flight-ops-which-cannot-be-known-ahead-of-flight">Science depends on flight ops, which cannot be known ahead of flight</h1>
+
+<h2 id="putting-the-cart-before-the-horse">Putting the cart before the horse</h2>
+
+<p>In the study of literature, there is a literary devive known as <em>hysteron proteron</em>, which colloquially is often termed “putting the cart before the horse.” Alas, the way NASA has structured the way it does science experiments often has a similar flavor: requiring the answer to be known before the experiment is performed.</p>
+
+<p>As NASA Principal Investigators (PIs), we are asked to specify requirements for instrumentation and apparatus that the engineers are then supposed to build. The problem is, the scientists often spec instrumentation based on what they can get in the laboratory on the ground, not necessarily what is practical or even possible to fly on ISS, with its myriad safety, operational, power, mass and mechanical shock requirements. Similarly, we are told to define scientific goals, not just a general overview of what we hope to accomplish, but specific criteria as to what would constitute partial, satisfactory and complete scientific success.</p>
+
+<p><strong>But if we could define specifically what would be successful scientifically, then we would know the answer before asking the question—and there would be little point in doing the actual experiments!</strong></p>
+
+<p>Moreover, at present, the science office is a subdivision of payloads, which manage all of the hardware on the ISS. This is a completely different division than flight operations, the pilots who fly the station and manage its communication. So inevitably, if science or engineering requirements are defined from the viewpoint of only one division, it can conflict with what is going on elsewhere. This is, of course, not a specific problem to NASA, but instead symptomatic the challenges of working within any large organization.</p>
+
+<h2 id="organizational-divisions-between-science-and-flight-ops-are-problematic">Organizational divisions between science and flight-ops are problematic</h2>
+
+<p>From a PI standpoint, constraints from flight operations never enter the specification or definitions of the science experiments. We are told to specify what we need, which then the science / payloads office coordinates, and has to try to balance with all of the other experiments and payloads. They are tireless advocates for our cause, for which we are extremely grateful and have received very, very generous allocations of crew time and ISS resources. And through this process we have learned from the many iterations of the BCAT experiment is that it is invaluable to understand what everyone else’s constraints are. Often times, we would specify that we needed two weeks to run our samples, but if the flight schedule only had 12 contiguous days available, we would not be able to use that time, and would have to wait until our nominal requirements (i.e. the two weeks) were available, even if that would not be possible for many months in the future. But from our standapoint, 12 days of data now could be worth a lot more than a “complete” set of data months later—especially because all kinds of things can go awry in the interim (samples may dry out, instruments may get broken, the Space Station itself may have an operational issue).</p>
+
+<p>Alas, because the normal procedures do not involve science PIs in flight operations, these types of tradeoffs are not ordinarily presented to the PI, and instead are negotiated among several constituencies within NASA, who may not have the background to make the decisions that are best for the science. Conversely, unless the PIs have been involved in several successful flight experiments and have worked with the different NASA branches, it’s unlikely that they understand the panoply of constraints that flight on orbit imposes, so it is hard for them to weigh the practical factors.</p>
+
+<p>As a result, we do the best job we can to suggest what we <em>a priori</em> feel is a reasonable operational plan based on our best guesses as to how the apparatus will perform, with full awareness of the wisdom of Prussian (German) field Marshal Helmuth Karl Bernhard Graf von Moltke dictum that, roughly translated, that “no battle plan survives first contact with the enemy.”</p>
+
+<h1 id="ace-m2-first-round-flight-ops-main-goal-define-and-characterize-operational-capabilities">ACE-M2 first-round flight ops main goal: define and characterize operational capabilities</h1>
+
+<p>The main point of the first runs of the ACE-M2 experiment are to image all of the samples and see if we can actually observe them. If we can’t image any sample in the microscope, then obviously there won’t be much use for future operations. Fortunately, in general we were able to acquire good images of all of the samples, which I describe in greater detail in a <a href="/science/operations/2014/07/01/ace_m2_first_round_success.html">later post</a>.</p>
+
+<p>Once this basic ability to image samples has been established, the main objective is to understand the capabilities of our system. This not only includes the physical aspects of the optical system, camera and other instrumentation, but the amount of time different operations actually take when a human is operating the LMM setup amidst all of the mayhem onboard the ISS itself.</p>
+
+<h2 id="optical-capabilities-exploring-objectives">Optical capabilities: exploring objectives</h2>
+
+<p>The LMM is equipped with several microscope objective lenses: 2.5x, 10x, 20x and 40x air, and the 63x and 100x oil-immersion objectives. There are several filter sets, though we use the Texas Red set for almost all of our samples, whose spectra we checked before launch so that they were compatible with the dyes we use in the particles. There is a single CCD camera, made by a company called QImaging, that uses the Sony ICX285 CCD chip that has been a workhorse for the entire industry for the first decade of this century, though more recently surpassed by much better imaging technologies.</p>
+
+<h3 id="25x-air-sample-surveys">2.5x air: sample surveys</h3>
+
+<p>Using the lowest-magnification objective, the 2.5x air, we survey every well at the beginning of each full experiment, with both bright-field and fluorescence, to check on the status of the sample and see quite generally what is going on, i.e. the location and density of the particles. This objective lens has a very large depth of field, encompassing the entire sample well, giving us a very good overview of each sample. These images also form part of the safety checks at the beginning and end of each experiment, to make sure for example that the wells are all intact, not leaking or broken, etc.</p>
+
+<h3 id="10x-20x-and-40x-air-sample-details">10x, 20x and 40x air: sample details</h3>
+
+<p>Perhaps the most important objectives are the medium-magnification air objectives. These allow us to zoom into particular areas in the sample, and get a more detailed view. In general, the quality of the images appears to be best with the 10x, and good with the 20x and 40x.</p>
+
+<h3 id="63x-and-100x-oil-highly-disappointing">63x and 100x oil: highly disappointing</h3>
+
+<p>On paper, the 63x and the 100x should give the highest-quality views, because they at least double the <em>numerical aperture</em> of the air objectives; that is, they should have roughly double the resolution, so that features that are visible but blurry at 40x should be sharper and more clearly defined, with better contrast, with the 63x lens.</p>
+
+<p>These two objectives require the addition of immersion oil, a droplet of which is added by the crew as the samples are loaded. We did a number of different tests, looking at the same areas with different objectives. Surprisingly—and not in a good way—the image quality is invariably worse with the oil-immersion, higher-magnification objectives, than with those that are air-based. This is backward, and should not happen, and demonstrates that something is wrong with the current configuration of the microscope on-orbit. Engineers at ZIN are working on this issue, so stay tuned.</p>
+
+<p>But from a practical standpoint, there is no reason for the immediate future to incorporate any of the oil-immersion objectives. This has the collateral benefit that no oil then need be added by the crew members, or manually moved via the objective to different sample wells, giving greater flexibility to the imaging of different sample wells.</p>
+
+<h2 id="timing-individual-operations">Timing individual operations</h2>
+
+<p>Once the objectives have been selected and we understand how they can best be deployed to give the images we want, the major task to understand how long different operations actually take:</p>
+
+<ul>
+  <li>starting up the LMM inside the FIR rack</li>
+  <li>loading the sample</li>
+  <li>moving the microscope stage to the right positions on the samples</li>
+  <li>establishing the distance between the objective lens and the sample coverslip</li>
+  <li>adjusting imaging parameters on the camera to acquire good images</li>
+  <li>saving and downlinking image data</li>
+  <li>shutting down the rack</li>
+</ul>
+
+<p>While we have estimates for how long these operations take on the ground, things are often quite different on orbit. And establishing the timing is <em>absolutely critical</em> for planning future operations, all of which must happen in the context of a competition for resources like crew time, machine time, operator time, power, etc.</p>
+
+<h2 id="meshing-with-the-iss-timeline-and-infrastructure-los">Meshing with the ISS timeline and infrastructure: LOS</h2>
+
+<p>One of the major differences between doing experiments on the ground, in a well-controlled, isolated (university) research laboratory, and the ISS, is the number of other things happening at the same time. In our labs, there may be a few people walking in and out of the room, but generally things are still, power, light, temperature, gases and water are continuously available, and mechnically the building is stable in the absence of, say, high winds or a major rainstorm. Almost none of those factors is true on orbit; the ISS is a flight vehicle, and flies around the earth in orbit, traversing the planet every couple of hours.</p>
+
+<p>The ISS communicates with the ground via a network of geostationary satellites. Unfortunately, this network does not cover the entire earth’s surface, so that every few hours (and often more frequently than that), the Station loses communication, during events known as “Loss of Signal” or LOS. During this time, we cannot access our experiment at all, so either it is running something in an automated fashion that we can script ahead of time, or it must sit there until communications are re-acquired.</p>
+
+<p>So not only is the total time relevant for each operation, but complex experiments must be broken down into a series of smaller sequential operations, either that execute remotely during an LOS event (ideal, because then we don’t lose any time), or must be robust to being interrupted and (re)started again at a later time.</p>
+
+<h2 id="the-human-factor-reproducibility-and-robustness">The human factor: reproducibility and robustness</h2>
+
+<p>Finally, the operators on the ground work very hard to collect our data, taking 8-hour shifts at the console controls. They have a wide range of scientific background, so that we must be very precise in specifying procedures for data collection and documentation. Moreover, the procedures have to be simple and reliable enough to be executed without error by an operator working all day, even as she gets more tired and might overlook something.</p>
+
+<h1 id="major-results-from-the-first-run-a-flight-ops-plan-for-upcoming-experiments">Major results from the first run: a flight-ops plan for upcoming experiments</h1>
+
+<p>So the most important results from the first run are operations related, once we established we can image all of the samples. These procedures allow us to determine what to measure going forward, within the envelope of the resources that we have. After four 48-hour days to survey all of the samples, the remaining time will focus on the handful of colloid-polymer mixtures (samples 20, 21 and 22), and imaging them over time. We therefore expect to do the following for each sample, which based on the first-run operations will feasibly fit into the timelines we have requested:</p>
+
+<ol>
+  <li>
+    <p>Image all wells with 2.5x air objective. This is fast, easy, simple and gives on overall status check for safety and scientific reasons.</p>
+  </li>
+  <li>
+    <p>Create full tiled images of the entire well with the 10x air objective. This is a fast operation that gives us a properly-detailed assessment of each sample of interest; thus far, this lens arguably gives us the best images.</p>
+  </li>
+  <li>
+    <p>Zoom into selective areas and image with the 20x and 40s air objectives. This allows us to focus in more on the evolution of microstructure, guided with the overall tilings from the 10x.</p>
+  </li>
+</ol>
+
+<p>You will see this structure going forward for the observations of time-dynamics of these colloid-polymer mixtures. Note that this specific set of steps would <em>never</em> have been developed from entirely ground-based studies. Instead, we developed these procedures based on real experience aboard the ISS.</p>
+
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

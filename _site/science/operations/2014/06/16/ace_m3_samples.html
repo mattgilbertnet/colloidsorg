@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>ACE M3 samples for quantitative microscopy</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="ace-m3-quantitative-microscopy">ACE-M3: Quantitative microscopy</h1>
+
+<p>Thus far, ACE-M2 has been a resounding success. Every one of the samples which we have launched appears to work as we expected: dyes are bright, colloidal suspensions show variations in intensity. But most importantly, we are able to watch quite clearly the early stages of phase separation, as described in previous posts. So far, so good; we have a great <em>qualitative</em> understanding of what is happening so far.</p>
+
+<p>Upcoming experiments will look at the phase-separating samples in greater detail, with hope to quantify the rate of phase separation—something we have been able to do at larger lengthscales with the BCAT series of experiments, using photography and some image processing. But what we have never been able to figure out reliably is the concentration of particles in the two phases after phase separation. Unfortunately, the photos we take with the camera flash are not <em>linear</em> in relating intensity the image to particle concentration. Why? Imagine photographing clouds; you can’t really tell how thick the cloud layer is just by its brightness; if a lower cloud passes in front of another one, even if the total cloud thickness doubles, the light (usually) doesn’t fall by exactly half.</p>
+
+<p>These concentrations after the samples phase separate are important for us to understand some fundamental physics, test existing theories in a new regime, and be able to place our samples in the context of other systems. And they cannot be measured on the ground, where sedimentation may take place—which will inherently change the measured concentrations. So being able to quantify the relationship between brightness in the microscope and particle density is extremely important for the science we want to explore, and something we were never quite able to do with the BCAT experiments.</p>
+
+<p>ACE, however, uses fluorescence, a process that is linear. If you collect light from a sample well like we have on orbit, if the particle density is twice, the total brightness should also be twice. You might recall that we already launched a series of particle suspensions, which was intended to serve this purpose. We are looking at that data now, and hopefully that should work. But doing careful experiments means that we are always happy to run independent controls, cross-checks, and different systems to verify what we think we are seeing. A different method to quantify the brightness vs. concentration relationship would therefore be very useful.</p>
+
+<p>Fortunately, we have been given a great opportunity to send up more samples with the next round of ACE-M experiments, ACE-M3 which (at the moment) is set to launch in the fall aboard SpaceX-4. Preparing for this experiment involved a number of unique challenges:</p>
+
+<ol>
+  <li>
+    <p>We were only given the go-ahead a couple of weeks ago, after a bit of begging and pleading to squeeze us on board the next rocket! Fortunately, NASA and the great folks at ZIN agreed to make a little more space. So we had five new samples we could prepare—and only a few days to prepare them.</p>
+  </li>
+  <li>
+    <p>Because of the last-minute nature of the sample prep, we were restricted to the materials that were already approved as safe with a new set of sample cells (slightly different in construction from the ones we use on ACE-M2, but no time to update the loading procedures). But luckily, those materials include dyes that are the same colors as the particles, namely those based on fluorescein and rhodamine.</p>
+  </li>
+  <li>
+    <p>We need the samples we prepare to reflect similar optical behavior as the particles, suspensions and mixtures we already launched with ACE-M2. If they are too different, say involving different filters and lenses, then the results might not apply directly to the system whose physical behavior we want to quantify better on orbit.</p>
+  </li>
+</ol>
+
+<h1 id="sample-preparation-and-characterization">Sample preparation and characterization</h1>
+
+<p>I chose the rhodamine dyes, for the reason that it is red / pink, and our particles are pink, so I figured it was a decent place to start. Two samples with the same fluorescence should be the same color in different lighting conditions. I then took some rhodamine dye and dispersed in water, and ended up with a very dark red color, like a red wine, and I could barely see through it. So it seems like it had way too much dye, and I started diluting it out by factors of 10. But if we want to control the dye concentration, how can you assess that? Unfortunately, weighing the dye out is not very accurate. I started with a few mL of water, but the amount of dye is only a couple of milligrams, and our balance only reads to 0.1 mg, so the error on the dye concentration is inherently no better than a few percent.</p>
+
+<p>Moreover, how do we predict what the brightness will be in a fluorescence microscope? Obviously, we could use a fluorescence microscope, but if that is the instrument we are testing, we would prefer an independent way to measure the brightness. The best way would be to use a fluorometer, a specialized instrument that sends in a beam of light at a user-selectable wavelength (i.e. color), and then measures the amount of fluorescence emitted. Unfortunately, we don’t have such an instrument, and the ones in the chemistry department are not that convenient.</p>
+
+<h2 id="uv-vis-absorption-spectroscopy">UV-Vis absorption spectroscopy</h2>
+
+<p>We do, however, have a UV-Vis absorption spectrometer. This instrument sends light into the sample one color at a time, scanning over a large range of wavelengths, and records the amount of light passing through. These instruments are very carefully calibrated, and ours has a second reference light beam, so the data it outputs is a very careful, quantitative measure of absorbance. Why does this help? Because in order for light to be re-emitted as fluorescence, it must be absorbed at a lower wavelength. And by conservation of energy, doubling the fluorescence emission will lead to double absorption; it’s also a linear relationship (barring some specific quantum mechanical effects which I don’t expect to be sensitive to). So assessing the peak of the absorption gives us a way to characterize concentration.</p>
+
+<p><img src="/images/2014_06_17_dye/dye_colloid_abs_140617.png" alt="UV-Vis spectra" /></p>
+
+<p>First, I ran a sample of just plain distilled water. There should be no peaks in the absorption spectrum, and it should be basically be flat through the entire range of wavelengths (460 to 610 nm), as it is colorless—and therefore has no fluorescence—and transparent. Indeed, this is what I see, shown by the blue curve in the absorption spectra. I then ran the colloidal sample at 30% volume fraction, right in the middle of the range we have on orbit; its spectra has a nice peak at about 555 nm—which is why the samples appear pink: they absorb green light, and the absence of green light (e.g. on a color wheel) is pink / magenta.</p>
+
+<p>Then I ran concentrations of the rhodamine dye; fortunately, the main peak in the absorption spectrum is very, very close to that of the particles, shown with the curves in the other colors. You can see how close the peaks are for the colloids (red) and the dye at a concentration of 13.7 mg/L. This is very, very fortunate, because it shows how the optical behavior of the dye is an excellent proxy for the spectral characteristics of our particles!</p>
+
+<p>So by a bit of trial an error, I found the rough dye concentration corresponding to the brightness of our 30% colloid sample. Then with some careful sample prep, I spaced them out linearly over the range of brightness that spans what I expect the colloids on orbit will (other colored lines in the plot), so we will learn about the camera and imaging system with parameters similar to what we will use for the colloids.</p>
+
+<h2 id="samples-to-be-launched">Samples to be launched</h2>
+
+<p>Here’s the final list of samples we submitted to ZIN / NASA:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Sample</th>
+      <th style="text-align: center">Dye concentration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">plu_M3A</td>
+      <td style="text-align: center">1.05 mg/L</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">plu_M3B</td>
+      <td style="text-align: center">7.36 mg/L</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">plu_M3C</td>
+      <td style="text-align: center">13.7 mg/L</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">plu_M3D</td>
+      <td style="text-align: center">20.0 mg/L</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">plu_M3E</td>
+      <td style="text-align: center">26.3 mg/L</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="testing-linearity">Testing linearity</h1>
+
+<p><img src="/images/2014_06_17_dye/dye_concs_abs_140617.png" alt="Absorption vs. concentration" /></p>
+
+<p>To check the linearity of the fluorescence intensity, I measured the height (absorbance) of each peak at 554 nm, and plotted it as a function of concentration (from the sample preparation). There are several ways to measure the peak: reading off the top value, or averaging over a few nm around the maximum. In all cases, the points fall on top of each other, as seen in the figure at right, where the different ways of measuring peak height are indistinguishable. And, critically, the points all fall along a straight line (purple in the figure), which extrapolates to very close to the origin. These data show very carefully that the relationship between absorbance—and therefore fluorescence—is linear with dye concentration, which have similar spectral characteristics to the colloidal particles we have launched.</p>
+
+<p>This is exactly as we would hope for a good set of standard samples, to use to then explore and calibrate the imaging system properly, using a different chemistry while still in the same physical realm (in terms of fluorescence intensity) that we are interested in for our colloidal samples. So we are very excited to launch these as a part of the ACE-M3 experiment!</p>
+
+<p>Finally, here is the code from the second plot, with the linear fit to the <a href="/images/2014_06_17_dye/peak_summary_130615.txt">raw data</a>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">prettyplotlib</span> <span class="k">as</span> <span class="n">ppl</span>
+
+<span class="n">dye_concs_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row1</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">'peak_summary_130615.txt'</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">):</span> 
+    <span class="n">dye_concs_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row1</span><span class="p">)</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="n">dye_concs_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">water_blank</span> <span class="o">=</span> <span class="n">dye_concs_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">values1</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">dye_concs_data</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">concs</span><span class="o">=</span><span class="n">values1</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">window5nm</span> <span class="o">=</span> <span class="n">values1</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">linfit</span> <span class="o">=</span> <span class="n">polyfit</span><span class="p">(</span><span class="n">concs</span><span class="p">,</span> <span class="n">window5nm</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fitrange</span> <span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+
+<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">ppl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">concs</span><span class="p">,</span><span class="n">values1</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span><span class="s">'o'</span><span class="p">)</span>
+<span class="n">ppl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fitrange</span><span class="p">,</span><span class="n">polyval</span><span class="p">(</span><span class="n">linfit</span><span class="p">,</span><span class="n">fitrange</span><span class="p">),</span><span class="s">'-'</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s">'concentration [mg/L]'</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s">'absorbance'</span><span class="p">)</span>
+<span class="n">title</span><span class="p">(</span><span class="s">'Dye concentration-dependent absorption</span><span class="se">\n</span><span class="s"> Peter J. Lu, 17 Jun 2014'</span><span class="p">)</span>
+<span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">])</span>
+<span class="n">lg</span><span class="o">=</span> <span class="n">legend</span><span class="p">([</span><span class="s">'peak max'</span><span class="p">,</span><span class="s">'2 nm window'</span><span class="p">,</span><span class="s">'5 nm window'</span><span class="p">],</span><span class="s">'upper left'</span><span class="p">)</span>
+<span class="n">lg</span><span class="o">.</span><span class="n">draw_frame</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">savefig</span><span class="p">(</span><span class="s">'dye_concs_abs_140617.pdf'</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

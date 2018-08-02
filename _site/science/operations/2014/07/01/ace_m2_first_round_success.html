@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>ACE-M2 runs 1 and 2 success summary</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="ace-m2-first-round-flight-operations-major-milestones-achieved">ACE-M2 first-round flight operations: major milestones achieved</h1>
+
+<p>With ACE-M2, we sent up almost two dozen new, different samples, and did not know <em>a priori</em> if they would mix properly on orbit, how they would look in the microscope, or whether we could observe their dynamics with the instrumentation and constraints we have. After the first round of on-orbit flight operations, we have a number of significant milestones—that we can mix, load and image the samples; and that we now have 
+<a href="/operations/2014/06/30/ace_m2_ops.html">flight operations procedures</a> that will give us good data going forward, within the envelope of our resources. Over two 48-hour continuous runs (run 1 was 4-6 June 2014; run 2 was 18-20 June 2014), we were able to examine all of the samples (except for the well that broke). Because we looked at different racks over each of these runs, I am combining my discussion of the results treating this as one “round” of the experiment. I will describe a few of the results from the samples that we have thus far learned, in addition to everything else. As with most interesting science experiments, the answers beget new questions, which is why this is an exciting project to work on!</p>
+
+<h1 id="samples-can-be-mixed-and-imaged">Samples can be mixed and imaged</h1>
+
+<p>As we now know from the <a href="/operations/science/2014/06/03/ace_first_data.html">first images</a>, the mixing and optics are working well, so we can take images and see all of the samples well. This is a major success and demonstrates overall the samples are good, and that there is no obvious show-stopper preventing us from gathering good data from our samples.</p>
+
+<p><em>For reasons that I will elaborate upon in a later post, we are still coming up with a system to label and organize all of the image data, so this summary of results will wait until that process is finished before I add the processed images.</em></p>
+
+<h1 id="dye-samples">Dye samples</h1>
+
+<p>We can image the fluorescence from all of our dye samples, using the Texas Red and FITC filters, as appropriate. We don’t see any structures in these samples, so everything is as we expect. The field of illumination is not even, with sever vignetting near the edges for the lowest magnifications. These samples which we know to be spatially uniform might therefore provide a way to correct for inhomogeneous illumination.</p>
+
+<h1 id="colloidal-suspensions">Colloidal suspensions</h1>
+
+<p>We can observe different levels of brightness for different volume fractions in the simple particle suspensions. Ultimately, we want to be able to calibrate overall brightness with volume fraction, so these samples will hopefully provide a calibration mapping between image intensity and colloid volume fraction. This is critically important to the science, and a major advance of the ACE experiment over, say, previous BCAT iterations. We have always been interested in measuring the volume fraction after phase separation is complete, but cannot do so on the ground (because the phase separation process is different in microgravity, which is why we do the experiment in the first place!). Being able to measure that with ACE in our phase-separating samples would be a major advance.</p>
+
+<h2 id="science-is-serendipitous">Science is serendipitous</h2>
+
+<p>Even when a sample may “fail” by our pre-existing criteria, we can still learn interesting things, and turn that into a success by thinking along different lines. One of the colloidal suspension samples appears to have had a stir bar stuck in a dense suspension, very likely because the stir bar happened to be stuck in a place around which colloid sedimented densely, preventing the bar from being freed later on orbit. However, we know both the starting volume fraction of the sample throughout the whole sample well, and the fraction of that well occupied by dense colloid that sedimented. This allows us to estimate the volume fraction, which we expect to be near to the hard-sphere glass transition volume fraction of 58%. That would give us an additional volume fraction point on our calibration curve—one which is not possible to create otherwise, because you physically could not load a colloidal suspension at that density! Sometimes, even an initial failure can give you data you could not otherwise acquire!</p>
+
+<h1 id="colloid-polymer-mixtures">Colloid-polymer mixtures</h1>
+
+<p>We have three colloid-polymer mixture sample classes. One is a phase-separating mixture of small particles and polymer; another is a phase-separating one with large particles; and the third is an arrested gel (at least on earth) that involves large particles and polymer.</p>
+
+<h2 id="phase-separating-samples">Phase separating samples</h2>
+
+<p>Initial observations indicate that the mixing is sufficient, and we can watch the evolution of structures in these samples over several days. The timescale is quite appropriate for the ACE experiment: samples change over hours or days, making useful the collection of similar sets of data over the course of days to weeks. They are not changing so fast that we will miss the activity during sample mixing and loading into the LMM; nor are they so slow that no activity is discernable during our runs. This is all very good news.</p>
+
+<h2 id="gel-sample">Gel sample</h2>
+
+<p>Moveover, after waiting several weeks, we see the formation of stable colloidal structure which may or may not be kinetically arrested; we are eagerly awaiting new data on this particular point.</p>
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

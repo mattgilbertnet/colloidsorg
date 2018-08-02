@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>ACE-M2 sample layout</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="choosing-the-sample-well-layout">Choosing the sample well layout</h1>
+
+<p>We have 30 wells in total, and 22 samples prepared. We distributed the samples throughout the strips in such a way that we would preserve the broadest range of scientific observations if we lost a well, or a strip; that is, we sought to avoid actively placing all of the same types of samples physically near each other, in case something went wrong.</p>
+
+<p>The sample composition chart can be tedious to work with, because it’s effectively just a list of numbers. So to facilitate keeping track of the different samples and their well locations, I created an icon-based chart. Each entry in the table has a square icon tile, containing all of the relevant information on each sample, which can be read at a quick glance.</p>
+
+<h3 id="dye-samples">Dye samples</h3>
+
+<p>Dye samples have the name of the dye written in the color of the dye solution (red and yellow), within the grey circle; the brightest colors represent the higher concentration (of two), and the faded / lower-saturation text occurs in samples with the lower concentrations.</p>
+
+<h3 id="colloidal-suspensions">Colloidal suspensions</h3>
+
+<p>Each sample has a pie chart showing the volume fraction (out of 100%) in bright red. The radius of the circle denotes the particle size. Samples with the larger (of two) particle diameters have circles that nearly fill the black squares, where the exact volume fraction is written in text <em>within</em> the pie chart. For samples with the smaller particle diameter, the pie chart is substantially smaller, and the text indicating the volume fraction resides <em>outside</em> the pie chart.</p>
+
+<h3 id="colloid-polymer-mixtures">Colloid-polymer mixtures</h3>
+
+<p>These samples follow the same convention as for the colloidal suspensions; however, those samples with depletant polymer have a blue triangle at the lower-right of the square. For samples that are expected to phase separate in a thermodynamic process known as spinodal decomposition, the blue triangle is hatched. For samples that are supposed to kinetically arrest into a gel state, the blue triangle is solid.</p>
+
+<h1 id="platter-2104">Platter 2104</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Strip</th>
+      <th style="text-align: center">Well 1</th>
+      <th style="text-align: center">Well 2</th>
+      <th style="text-align: center">Well 3</th>
+      <th style="text-align: center">Well 4</th>
+      <th style="text-align: center">Well 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>612</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample04.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample06.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample11.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample17.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample20.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>615</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample12.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample09.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample15.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample10.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample22.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>621</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample01.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample07.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample08.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample15.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample20.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/images/ace_m2_sample_tiles/platter_2104_web.png" alt="Sample platter 2104" /></p>
+
+<h1 id="platter-2105">Platter 2105</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Strip</th>
+      <th style="text-align: center">Well 1</th>
+      <th style="text-align: center">Well 2</th>
+      <th style="text-align: center">Well 3</th>
+      <th style="text-align: center">Well 4</th>
+      <th style="text-align: center">Well 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>608</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample21.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample15.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample09.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample13.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample02.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>618</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample05.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample18.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample12.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample22.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample21.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>613</strong></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample03.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample19.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample21.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample21.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/ace_m2_sample_tiles/sample21.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/images/ace_m2_sample_tiles/platter_2105_web.png" alt="Sample platter 2105" /></p>
+
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

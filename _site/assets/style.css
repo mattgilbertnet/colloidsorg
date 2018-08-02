@@ -194,7 +194,7 @@ td, th { padding: 0; }
   .offset-by-one-half.column, .offset-by-one-half.columns { margin-left: 52%; } }
 .researchtopic-content { margin-left: 0; }
 
-.researchtopic-publications, .researchtopic-press { width: 100%; clear: both; }
+.researchtopic-publications, .researchtopic-mediacoverage { width: 100%; clear: both; }
 
 .researcharea-topic { padding-bottom: 2rem; }
 
@@ -242,7 +242,7 @@ body { font: 400 12px/1.5 Helvetica, Arial, sans-serif, "Apple Color Emoji", "Se
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #009BC5; margin: 0; }
 
-h1 { font-size: 2.5rem; padding: .25em 0 1em 0; line-height: 1.25em; }
+h1 { font-size: 2.5rem; padding: .25em 0 .5em 0; line-height: 1.25em; }
 
 h2 { font-size: 1.75rem; padding: .25em 0 .4em 0; line-height: 1.25em; }
 
@@ -321,10 +321,10 @@ ul ul, ul ol, ol ol, ol ul { margin: 1.5rem 0 1.5rem 3rem; font-size: 90%; }
 
 li { margin-bottom: 1rem; }
 
-/** Lists (Publications, Press, etc.) */
-.publications ol, .press ol, .links ol { list-style: none; margin-left: 1em; margin-bottom: 0; }
+/** Lists (Publications, Media Coverage, etc.) */
+.publications ol, .mediacoverage ol, .links ol { list-style: none; margin-left: 1em; margin-bottom: 0; }
 
-.publications li, .press li, .links li { margin: 0 0 1em 0; }
+.publications li, .mediacoverage li, .links li { margin: 0 0 1em 0; }
 
 .site-nav ul { display: flex; justify-content: flex-end; list-style: none; margin: .5rem 0rem 1rem .5rem; }
 
@@ -522,6 +522,31 @@ a.gallery { display: flex; align-items: center; justify-content: center; min-hei
 .video-custom a:hover svg { opacity: .9; }
 
 .video-custom .title { box-sizing: border-box; background-color: rgba(0, 0, 0, 0.55); bottom: 0; color: #fff; font-weight: bold; margin: 0; padding: 10px; position: absolute; width: 100%; }
+
+/* Circular Posts Display */
+.sort { margin: 1em 0; font-size: 12px; }
+
+.sort a:hover { text-decoration: underline; }
+
+.col-sm-3 { padding-left: 10px; padding-right: 10px; }
+
+.circle { opacity: .65; width: 100%; border-radius: 50%; font-size: 20px; font-weight: 500; text-align: center; margin-bottom: 20px; background-size: 100% 100%; transition: all .3s linear; -o-transition: all .3s linear; -moz-transition: all .3s linear; -webkit-transition: all .3s linear; }
+
+.circle:hover { opacity: .9; }
+
+.circle > p { display: table-cell; height: 175px; width: 175px; vertical-align: middle; padding: 15px; text-align: center; font-size: 12.5px; letter-spacing: .5px; color: #000; }
+
+.date { color: #0c5498; display: block; margin-bottom: 2px; }
+
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+.isotope, .isotope .isotope-item { -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; transition-duration: 0.8s; }
+
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; transition-property: height, width; min-height: 100%; }
+
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; transition-property: transform, opacity; }
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

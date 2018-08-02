@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>First images of ACE-M2 samples</title>
+  <meta name="description" content="colloids.org jekyll github pages">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.isotope.js" type="text/javascript"></script> 
+<script src="/assets/js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  // Sticky Header
+	createSticky($("#navheader"));
+
+  var $container = $('.portfolioContainer');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+
+  });
+ 
+  $('.sort a').click(function(){
+    $('.sort .current').removeClass('current');
+      $(this).addClass('current');
+ 
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    }); 
+
+});
+
+function createSticky(sticky) {
+	
+	if (typeof sticky !== "undefined") {
+
+		var	pos = sticky.offset().top,
+				win = $(window);
+			
+		win.on("scroll", function() {
+    		win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+		});			
+	}
+}
+</script>
+
+
+  
+</head>
+<body><header class="container page-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="http://peterlu.org/"><img id="logo_header" src="/assets/images/logo_header.png" alt="Peter J. Lu"/></a>
+  </div>
+</header>
+
+<div id="navheader">
+	<div class="site-nav-row row">
+		<div class="site-nav-container column">
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+        
+						<div class="nav-home"><a href="http://peterlu.org/" alt="Peter J. Lu"><img id="nav_home_logo" src="/assets/images/logo_header_small.png" alt="Peter J. Lu"></a></div>
+					<ul>
+						<li id="nav-home-slick"><a href="/" alt="Home">Home</a></li>
+					
+						<li><a href="http://www.peterlu.org/research/" alt="Research">Research</a></li>
+					
+						<li><a href="http://www.peterlu.org/publications/" alt="Publications">Publications</a></li>
+					
+						<li><a href="http://www.peterlu.org/mediacoverage/" alt="Media Coverage">Media Coverage</a></li>
+					
+						<li><a href="http://www.peterlu.org/photo/" alt="Photo">Photo</a></li>
+					
+						<li><a href="http://www.peterlu.org/video/" alt="Video">Video</a></li>
+					
+						<li><a href="http://www.peterlu.org/about.html" alt="About">About</a></li>
+					
+					</ul>
+        </div>
+      </nav>
+		</div>
+	</div>
+</div><div class="container">
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="row"><a href="colloids.org">&lt; Back to Colloids.org</a></div>
+<article>
+<h1 id="first-images-from-the-light-microscopy-module-lmm">First images from the Light Microscopy Module (LMM)</h1>
+
+<p>We have 15 samples in the holder in this set of experiments, and our first task is to image all of the samples with the lowest-magnification microscope objective lens (2.5x). This lens’s magnification is ideal for the task, as it gives an image of each entire sample well. We first use brightfield transmission illumination (50/50 filter), where the intensity of the image is proportional to the amount of light passing through different parts of the sample. Thus, magnetic stir bar appears dark, as it transmits no light, and the glass appears bright, as most of the light passes through. Bubbles act as mini-lenses, and therefore are bright in the center and dark around their edges; the light from the edges is bent toward the center (or focused) by the bubble. These features are evident in an image of well number 5, containing a phase-separating sample, as shown in the image on the left.</p>
+
+<p><img src="/images/2014_06_04_first_day/140604_well5_2p5x.png" alt="well 5, 2.5x mag, brightfield transmission" /></p>
+
+<p>The image on the right is the same sample and position, but collected in fluorescence mode, where the intensity is proportional to the number of (fluorescent particles). Interestingly, we observe higher concentrations of particles aggregating around the edges of the sample chamber, the stir bar and the bubbles. Neither the stir bar nor bubble contain any fluorescent particles, and like the background glass appear black.</p>
+
+<h1 id="compositing-images-to-get-a-higher-magnification-view-of-the-entire-sample">Compositing images to get a higher-magnification view of the entire sample</h1>
+
+<p>The 2.5x images are good to show the entire sample, but the resolution is limited. To get a higher-resolution view of the sample, we switch to a higher-magnification objective lens; however, the tradeoff is that the field of view is curtailed, and only part of the sample fits into the visible field of view. Fortunately, the LMM has an automated stage, so that the position of the sample visible to the microscope can be controlled remotely. As a result, we can take images in a tile-pattern that cover the entire sample:</p>
+
+<p><img src="/images/2014_06_04_first_day/140604_well5_composite.gif" alt="well 5, 10x mag, fluorescence tiled composite" /></p>
+
+<p>The different fluorescence images are the tiled composite image taken at different depths from the cover slip inside the sample. If you look at the stir bar, you can see how different parts of the bar come into “focus” in the different images, giving an indicator of the depth within the sample from which the images are collected.</p>
+
+<p>Each “tile” is a bit darker to the left, so that the rectangles representing each individual 10x image are easily seen. This is a result of uneven illumination; the samples are illuminated by light from a lamp, which does not cover the sample evenly (which might be ameliorated by changing internal microscope aperture settings).</p>
+
+<p>But we have another way we might correct for this problem: a couple of our samples are fluorescent dye dispersed in a solvent inside identical sample wells—physically, the intensity of fluorescence should be completely even / isotropic, so any unevenness in the image should be caused by the illumination. By taking images under identical conditions of both the phase-separating sample of interest, and of the even dye solution, we should be able to cancel the background and see the sample without the effects of the uneven lamp illumination. So we will be testing this in upcoming operations.</p>
+
+<p>Meanwhile, next stage is to look at higher-magnification, where we seek to understand the details of small portions of the sample, and see the behavior of these colloid structures up close.</p>
+
+</article>
+
+
+      </div>
+    </main>
+    
+    </div><footer class="container">  
+<div class="column">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.colloids.org" property="cc:attributionName" rel="cc:attributionURL">Peter J. Lu</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+
+</body>
+
+</html>

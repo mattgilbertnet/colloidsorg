@@ -2,6 +2,8 @@
 layout: post
 date: 2014-07-14 0:15:30 UTC
 title: ACE-M2 run 4, first phase-separation images
+categories: science operations
+image: images/homepage/140714.png
 ---
 
 # ACE-M2 Run 4: comparing time evolution among wells with the same sample

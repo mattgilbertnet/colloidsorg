@@ -2,6 +2,8 @@
 layout: post
 date: 2014-06-04 0:15:30 UTC
 title: First images of ACE-M2 samples
+categories: operations science
+image: images/homepage/140604b.png
 ---
 
 # First images from the Light Microscopy Module (LMM)
