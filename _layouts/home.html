@@ -27,7 +27,7 @@
   		{% for post in site.posts %}
 
 	  	<div class="col-sm-3 {{ post.categories | join: ' ' }}">
-        <a href="{{ post.url }}">
+        <a href="{{ post.url  | prepend: site.baseurl }}">
   	  		<div class="circle" style="background-image:url('{{ post.image }}');">
             <p><span class="date">{{ post.date | date_to_string }}</span>{{ post.title }}</p>
           </div>
