@@ -50,6 +50,9 @@
   .container{
     width: 85%;
     padding: 0; }
+  .container.embed{
+    width: 100% !important;
+  }
 }
 
 /* For devices larger than 550px */

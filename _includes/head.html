@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 function createSticky(sticky) {
 	
-	if (typeof sticky !== "undefined") {
+	if (sticky.length && typeof sticky !== "undefined") {
 
 		var	pos = sticky.offset().top,
 				win = $(window);
