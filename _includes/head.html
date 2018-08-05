@@ -56,6 +56,12 @@ $(document).ready(function () {
       return false;
     }); 
 
+ 	if (window.self != window.top) {
+    $(document.body).addClass("in-iframe");
+  } else {
+    $(document.body).addClass("out-iframe");
+	}
+$(window).smartresize();
 });
 
 function createSticky(sticky) {

@@ -930,6 +930,16 @@ a.gallery{
     transition-property: transform, opacity;
 }
 
+.in-iframe header,
+.in-iframe #navheader,
+.in-iframe .front-content h1,
+.in-iframe .in-iframe-hide{
+  display:none;
+}
+
+.in-iframe .container{
+  width:100% !important;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
