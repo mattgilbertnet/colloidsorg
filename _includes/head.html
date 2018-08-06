@@ -25,6 +25,7 @@
 <script src="{{ "/assets/js/jquery.isotope.js" | prepend: site.baseurl }}" type="text/javascript"></script> 
 <script src="{{ "/assets/js/slick.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 <script type="text/javascript">
+var colloids_json = [];
 $(document).ready(function () {
   // Sticky Header
 	createSticky($("#navheader"));
@@ -62,7 +63,39 @@ $(document).ready(function () {
     $(document.body).addClass("out-iframe");
 	}
 $(window).smartresize();
+
+
+  if($('.embed-content').length){
+    
+		$.getJSON( "/feed.json", function( data ) {
+			colloids_json = data;
+		});
+
+    $('.embed-content .circle').click(function(event) {
+      console.log('embed click event');
+      console.log($(this));
+      console.log($(this).attr('colloids-id'));
+      var json_to_send = getObjects(colloids_json.items, 'id', $(this).attr('colloids-id'));
+      console.log("json to send:");
+      console.log(json_to_send);
+      window.parent.postMessage(json_to_send, "*");
+    });
+  }
 });
+
+function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+      var o = obj[i];
+      console.log(o[key]);
+      console.log(val);
+      console.log(o[key] == val);
+        if (o[key] == val) {
+            objects.push(o);
+        }
+    }
+    return objects;
+}
 
 function createSticky(sticky) {
 	
