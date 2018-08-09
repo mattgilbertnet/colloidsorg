@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-07-15 0:15:30 UTC
 title: Why is it taking so long to post data? Data organization
-categories: operations science
+date: 2014-07-15 00:15:30 Z
+categories:
+- operations
+- science
+layout: post
 image: images/homepage/square186.png
 ---
 

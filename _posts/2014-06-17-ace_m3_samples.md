@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-06-17 0:00:00 UTC
 title: ACE M3 samples for quantitative microscopy
-categories: science operations
+date: 2014-06-17 00:00:00 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140617.png
 ---
 

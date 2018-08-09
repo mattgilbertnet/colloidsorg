@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-08-22 0:15:30 UTC
 title: Significant science, gelation and phase separation
-categories: science operations
+date: 2014-08-22 00:15:30 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140822.png
 ---
 

@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-08-26 0:15:30 UTC
 title: Same sample, different behavior?
-categories: science operations
+date: 2014-08-26 00:15:30 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140826.png
 ---
 

@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-08-21 0:15:30 UTC
 title: Image stabilization and filtering
-categories: science operations
+date: 2014-08-21 00:15:30 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140821.png
 ---
 

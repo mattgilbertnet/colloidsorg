@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-07-27 0:15:30 UTC
 title: First look at some raw data, preliminary stabilization
-categories: science operations 
+date: 2014-07-27 00:15:30 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140727.png
 ---
 

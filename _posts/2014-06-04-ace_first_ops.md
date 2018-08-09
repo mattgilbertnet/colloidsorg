@@ -1,8 +1,9 @@
 ---
-layout: post
-date: 2014-06-04 0:13:00 UTC
 title: ACE-M2 starting operations
-category: operations
+date: 2014-06-04 00:13:00 Z
+categories:
+- operations
+layout: post
 image: images/homepage/140604a.png
 ---
 

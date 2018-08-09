@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-03-06 0:00:00 UTC
 title: ACE-M2 sample layout
-categories: science operations
+date: 2014-03-06 00:00:00 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/140306.png
 ---
 

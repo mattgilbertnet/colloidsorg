@@ -1,8 +1,9 @@
 ---
-layout: post
-date: 2014-08-02 0:00:00 UTC
 title: Building a website from a few dozen lines of code
-category: informatics
+date: 2014-08-02 00:00:00 Z
+categories:
+- informatics
+layout: post
 image: images/homepage/square186.png
 ---
 

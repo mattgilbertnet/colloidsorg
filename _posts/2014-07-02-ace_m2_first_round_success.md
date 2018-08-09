@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-07-02 0:00:00 UTC
 title: ACE-M2 runs 1 and 2 success summary
-categories: science operations
+date: 2014-07-02 00:00:00 Z
+categories:
+- science
+- operations
+layout: post
 image: images/homepage/square186.png
 ---
 

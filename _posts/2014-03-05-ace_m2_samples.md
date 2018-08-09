@@ -1,8 +1,9 @@
 ---
-layout: post
-date: 2014-03-05 0:00:00 UTC
 title: Samples for the second ACE experiment, ACE-M2
-category: science
+date: 2014-03-05 00:00:00 Z
+categories:
+- science
+layout: post
 image: images/homepage/square186.png
 ---
 

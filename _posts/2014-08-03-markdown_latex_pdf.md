@@ -1,8 +1,9 @@
 ---
-layout: post
-date: 2014-08-03 0:00:00 UTC
 title: Converting the website to documents
-category: informatics
+date: 2014-08-03 00:00:00 Z
+categories:
+- informatics
+layout: post
 image: images/homepage/square186.png
 ---
 

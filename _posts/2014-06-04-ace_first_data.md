@@ -1,8 +1,10 @@
 ---
-layout: post
-date: 2014-06-04 0:15:30 UTC
 title: First images of ACE-M2 samples
-categories: operations science
+date: 2014-06-04 00:15:30 Z
+categories:
+- operations
+- science
+layout: post
 image: images/homepage/140604b.png
 ---
 

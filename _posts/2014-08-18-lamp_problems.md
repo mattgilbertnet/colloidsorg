@@ -1,8 +1,9 @@
 ---
-layout: post
-date: 2014-08-18 0:00:00 UTC
 title: On-orbit challenges, broken LMM lamp
-category: operations
+date: 2014-08-18 00:00:00 Z
+categories:
+- operations
+layout: post
 image: images/homepage/140818.png
 ---
 
